@@ -1,11 +1,11 @@
 package com.hle;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.time.LocalDate;
 import java.util.List;
 
 import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class PersonCollectionTest {
 
@@ -13,23 +13,20 @@ public class PersonCollectionTest {
         public void testPersonCollection() {
 
                 // Création de personnes avec le builder
-                Person jeanPerson = Person.builder()
-                                .firstName("Jean")
-                                .lastName("Dupont")
-                                .birthDate(LocalDate.of(1985, 5, 15))
-                                .build();
+                Person jeanPerson = new Person();
+                jeanPerson.setFirstName("Jean");
+                jeanPerson.setFamilyName("Dupont");
+                jeanPerson.setBirthDate(LocalDate.of(1985, 5, 15));
 
-                Person alicePerson = Person.builder()
-                                .firstName("Alice")
-                                .lastName("Durand")
-                                .birthDate(LocalDate.of(1990, 10, 20))
-                                .build();
+                Person alicePerson = new Person();
+                alicePerson.setFirstName("Alice");
+                alicePerson.setFamilyName("Durand");
+                alicePerson.setBirthDate(LocalDate.of(1990, 10, 20));
 
-                Person bobPerson = Person.builder()
-                                .firstName("Bob")
-                                .lastName("Martin")
-                                .birthDate(LocalDate.of(2000, 3, 5))
-                                .build();
+                Person bobPerson = new Person();
+                bobPerson.setFirstName("Bob");
+                bobPerson.setFamilyName("Martin");
+                bobPerson.setBirthDate(LocalDate.of(2000, 3, 5));
 
                 // Liste de personnes
                 List<Person> personnes = List.of(jeanPerson, alicePerson, bobPerson);

@@ -11,7 +11,7 @@ public class PersonConstructorAndSetterAndGetterTest {
 
         Person jamalPerson = new Person();
         jamalPerson.setFirstName("Hatim");
-        jamalPerson.setLastName("Lechgar");
+        jamalPerson.setFamilyName("Lechgar");
 
         //assertNotNull(jamalPerson);
         assertThat(jamalPerson).isNotNull();
@@ -20,7 +20,7 @@ public class PersonConstructorAndSetterAndGetterTest {
         assertThat(jamalPerson.getFirstName()).isEqualTo("Hatim");
 
         //assertEquals("Jamali", jamalPerson.getLastName());
-        assertThat(jamalPerson.getLastName()).isEqualTo("Lechgar");
+        assertThat(jamalPerson.getFamilyName()).isEqualTo("Lechgar");
 
 
   
